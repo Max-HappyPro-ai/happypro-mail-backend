@@ -16,13 +16,13 @@ export default async function handler(req, res) {
   let toEmail;
   switch (type) {
     case 'contact':
-      toEmail = 'contact@happypro.fr';
+      toEmail = 'happypro.france@gmail.com';
       break;
     case 'candidature':
-      toEmail = 'candidature@happypro.fr';
+      toEmail = 'happypro.france@gmail.com';
       break;
     case 'newsletter':
-      toEmail = 'newsletter@happypro.fr';
+      toEmail = 'happypro.france@gmail.com';
       break;
     default:
       return res.status(400).json({ error: 'Type invalide' });
@@ -30,7 +30,7 @@ export default async function handler(req, res) {
 
   try {
     await resend.emails.send({
-      from: 'HappyPro <contact@happypro.fr>',
+      from: 'HappyPro <happypro.france@gmail.com>',
       to: toEmail,
       subject: `Nouvelle ${type} de ${name}`,
       html: `
