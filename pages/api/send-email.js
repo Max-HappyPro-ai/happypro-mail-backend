@@ -13,19 +13,19 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Champs obligatoires manquants' });
   }
 
-  let toEmail;
-  switch (type) {
-    case 'contact':
-      toEmail = 'happypro.france@gmail.com';
-      break;
-    case 'candidature':
-      toEmail = 'happypro.france@gmail.com';
-      break;
-    case 'newsletter':
-      toEmail = 'happypro.france@gmail.com';
-      break;
-    default:
-      return res.status(400).json({ error: 'Type invalide' });
+  let toEmail = 'happypro.france@gmail.com';
+//  switch (type) {
+//    case 'contact':
+//      toEmail = 'happypro.france@gmail.com';
+//      break;
+//    case 'candidature':
+//      toEmail = 'happypro.france@gmail.com';
+//      break;
+//    case 'newsletter':
+//      toEmail = 'happypro.france@gmail.com';
+//      break;
+//    default:
+//      return res.status(400).json({ error: 'Type invalide' });
   }
 
   try {
